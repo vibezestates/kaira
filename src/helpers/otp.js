@@ -1,10 +1,11 @@
 // src/helpers/otp.js
 
-export const sendOtp = async (phone) => {
+export const sendOtp = async (phoneNumber) => {
+  const payload = { phone: phoneNumber };
   const res = await fetch("http://93.127.195.157/api/send-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone:phone }),
+    body: JSON.stringify(payload),
   });
 
   return await res.json();
