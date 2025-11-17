@@ -4,7 +4,7 @@ export const sendOtp = async (phone) => {
   const res = await fetch("http://93.127.195.157/api/send-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone }),
+    body: JSON.stringify({ phone:phone }),
   });
 
   return await res.json();
@@ -14,7 +14,7 @@ export const verifyOtp = async (phone, otp) => {
   const res = await fetch("http://93.127.195.157/api/verify-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone, otp }),
+    body: JSON.stringify({ phone:phone, otp: otp }),
   });
 
   return await res.json();
