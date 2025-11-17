@@ -28,7 +28,7 @@ export default function WhyKaira() {
 
   return (
     <section
-      className="py-12 sm:py-16 md:py-20 font-primary"
+      className="py-2 sm:py-2 md:py-2 font-primary"
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",

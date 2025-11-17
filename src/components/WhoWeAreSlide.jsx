@@ -5,7 +5,7 @@ import bgimg from "../assets/images/experience-background.webp";
 export default function WhoWeAreSlide() {
   return (
     <div
-      className='font-primary text-brown-light py-12 sm:py-16 md:py-20'
+      className='font-primary text-brown-light py-2 sm:py-2 md:py-8'
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",

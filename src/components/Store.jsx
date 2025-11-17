@@ -10,7 +10,7 @@ export default function Store() {
     }
   return (
     <div
-      className='flex flex-col items-center justify-center text-center px-6 py-16 sm:py-20 md:py-28 lg:py-32'
+      className='flex flex-col items-center justify-center text-center px-2 py-2 sm:py-2 md:py-12 lg:py-12'
       style={{
         backgroundImage: `url(${background})`,
         backgroundSize: "cover",

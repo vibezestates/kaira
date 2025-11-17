@@ -88,9 +88,9 @@ const LayoutAndConfig = () => {
   return (
     <section
       style={{ backgroundImage: `url(${bgimg})` }}
-      className="py-16 bg-[#F5EDD9]"
+      className="py-5 bg-[#F5EDD9]"
     >
-      <div className="max-w-6xl mx-auto px-6 text-center">
+      <div className="max-w-6xl mx-auto px-2 text-center">
         {/* Section Title */}
         <motion.h2
           initial={{ opacity: 0, y: 30 }}

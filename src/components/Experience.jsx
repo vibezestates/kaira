@@ -11,7 +11,7 @@ export default function Experience() {
   }
   return (
     <div
-      className='font-primary text-brown-light py-12 sm:py-16 md:py-20'
+      className='font-primary text-brown-light py-4 sm:py-4 md:py-6'
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",

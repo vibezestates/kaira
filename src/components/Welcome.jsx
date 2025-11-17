@@ -9,7 +9,7 @@ export default function Welcome() {
 
   return (
     <section
-      className='py-12 sm:py-16 md:py-20 font-primary'
+      className='py-8 sm:py-8 md:p8 font-primary'
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",

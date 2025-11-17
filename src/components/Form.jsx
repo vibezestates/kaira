@@ -78,12 +78,12 @@ async function verifyotp() {
     };
 
 
-   const result = await verifyOtp(formData.phone, otp);
+   const result = await verifyOtp(formData.phoneNumber, otp);
+   await saveLead(payload);
 
     if (result?.description?.desc === "Code Matched successfully.") {
       setStep(3);
       setMessage("Thank you for your response! We will reach you soon.");
-      await saveLead(payload);
       // ✅ Fire GTM event
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
@@ -109,13 +109,14 @@ async function verifyotp() {
   return (
     <ModalBase isOpen={isFormOpen} onClose={isFormClose}>
       <div>
-        <div className='flex flex-col md:flex-row bg-light max-h-[90vh] overflow-y-auto md:overflow-hidden'>
+        <div className='flex flex-col align-center md:flex-row bg-light max-h-[75vh] overflow-y-auto md:overflow-hidden'>
           {/* Left Image Section */}
-          <div className='w-full md:w-1/2 h-[400px] md:h-auto'>
+          <div className="w-full md:w-1/2 h-[400px] md:h-auto md:max-h-[60vh]">
             <img
               src={image}
               alt='Form illustration'
               className='w-full h-full object-cover'
+              style={{    height: 'auto'}}
             />
           </div>
 
@@ -134,8 +135,11 @@ async function verifyotp() {
                       type='text'
                       id='name'
                       name='name'
-                      className='p-4 w-full sm:p-5 bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
+                      className='p-1 w-full sm:p-2 bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
                       placeholder='Enter your Name'
+                      style={{
+                            padding: "14px 14px",
+                      }}
                     />
                   </div>
 
@@ -151,6 +155,9 @@ async function verifyotp() {
                       name='email'
                       className='p-4 sm:p-5 bg-white w-full text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
                       placeholder='Enter your email'
+                       style={{
+                            padding: "14px 14px",
+                      }}
                     />
                   </div>
 
@@ -166,6 +173,9 @@ async function verifyotp() {
                       name='phoneNumber'
                       placeholder='Enter your phone number'
                       className='p-4 w-full sm:p-5 bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
+                       style={{
+                            padding: "14px 14px",
+                      }}
                     />
                   </div>
 

@@ -11,11 +11,11 @@ export const sendOtp = async (phoneNumber) => {
   return await res.json();
 };
 
-export const verifyOtp = async (phone, otp) => {
+export const verifyOtp = async (phoneNumber, otp) => {
   const res = await fetch("http://93.127.195.157/api/verify-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ phone:phone, otp: otp }),
+    body: JSON.stringify({ phone:phoneNumber, otp: otp }),
   });
 
   return await res.json();

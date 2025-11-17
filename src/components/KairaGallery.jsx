@@ -28,7 +28,7 @@ export default function KairaGallery() {
 
   return (
     <div
-      className="font-primary text-brown-light py-16 sm:py-20 md:py-24"
+      className="font-primary text-brown-light py-5 sm:py-10 md:py-12"
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",

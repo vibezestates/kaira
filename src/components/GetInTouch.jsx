@@ -31,7 +31,7 @@ export default function InvestmentSection() {
 
   return (
     <div
-      className="font-primary text-brown-light py-16 sm:py-20 md:py-24 text-center"
+      className="font-primary text-brown-light py-10 sm:py-10 md:py-14 text-center"
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",
