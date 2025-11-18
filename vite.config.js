@@ -10,4 +10,9 @@ export default defineConfig({
     tailwindcss(),
     preload(),
   ],
+  build: {
+  modulePreload: {
+    polyfill: true,
+  }
+}
 })
