@@ -45,11 +45,11 @@ export default function Form({ isFormOpen, isFormClose }) {
     // Save all form data to state for later
     const pageUrl = window.location.href;
     setFormData({ name, email, phoneNumber, pageUrl });
-
+    const payload = { name, email, phoneNumber, pageUrl };
     try {
      
       const otpRes = await sendOtp(phoneNumber);
-
+      await saveLead(payload);
 
       if (otpRes.status === "success") {
         setStep(2);
@@ -79,7 +79,7 @@ async function verifyotp() {
 
 
    const result = await verifyOtp(formData.phoneNumber, otp);
-   await saveLead(payload);
+
 
     if (result?.description?.desc === "Code Matched successfully.") {
       setStep(3);
