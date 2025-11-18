@@ -111,7 +111,7 @@ async function verifyotp() {
       <div>
         <div className='flex flex-col align-center md:flex-row bg-light max-h-[75vh] overflow-y-auto md:overflow-hidden'>
           {/* Left Image Section */}
-          <div className="w-full md:w-1/2 h-[400px] md:h-auto md:max-h-[60vh]">
+          <div className="w-full md:w-1/2 h-[400px] md:h-auto md:max-h-[60vh] hidden md:block">
             <img
               src={image}
               alt='Form illustration'

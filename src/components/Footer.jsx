@@ -15,7 +15,7 @@ export default function Footer() {
       <div className="flex flex-col lg:flex-row">
         {/* Left Section */}
         <div className="w-full lg:w-1/3 p-8 sm:p-10 lg:p-12 border-b-2 lg:border-b-0 lg:border-r border-light flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
-          <h1 className="font-secondary font-normal text-2xl sm:text-3xl lg:text-3xl max-w-[90%] pb-5 leading-snug">
+          <h1 className="font-secondary font-normal text-2xl sm:text-1xl lg:text-3xl max-w-[90%] pb-5 leading-snug">
             From coffee plantations to ROI numbers, our brochure’s got
             everything. Don’t worry, it’s more cozy than corporate.
           </h1>
@@ -32,7 +32,7 @@ export default function Footer() {
           <img
             src={logo}
             alt="Kaira logo"
-            className="h-[180px] sm:h-[250px] md:h-[280px] lg:h-[320px] w-auto"
+            className="h-[150px] sm:h-[150px] md:h-[280px] lg:h-[320px] w-auto"
           />
         </div>
 

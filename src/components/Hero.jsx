@@ -93,37 +93,38 @@ export default function Hero() {
   return (
     <>
       <div
-        className='relative hidden md:flex flex-col items-center text-center min-h-[600px] md:min-h-[120vh] overflow-hidden px-4 md:pt-25 sm:px-10 md:px-20'
+        className="relative hidden md:flex flex-col items-center text-center min-h-[600px] md:min-h-[120vh] overflow-hidden px-4 md:pt-25 sm:px-10 md:px-20"
         style={{
           backgroundImage: `url(${background})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}>
+        }}
+      >
         {/* Animated Images - 4 positions */}
         <AnimatedImage
           src={getCurrentImageSrc(0)}
-          alt='Top Left Image'
+          alt="Top Left Image"
           initialClass={initial_TL}
           finalClass={final_TL}
           isAnimated={isAnimated}
         />
         <AnimatedImage
           src={getCurrentImageSrc(1)}
-          alt='Top Right Image'
+          alt="Top Right Image"
           initialClass={initial_TR}
           finalClass={final_TR}
           isAnimated={isAnimated}
         />
         <AnimatedImage
           src={getCurrentImageSrc(2)}
-          alt='Bottom Left Image'
+          alt="Bottom Left Image"
           initialClass={initial_BL}
           finalClass={final_BL}
           isAnimated={isAnimated}
         />
         <AnimatedImage
           src={getCurrentImageSrc(3)}
-          alt='Bottom Right Image'
+          alt="Bottom Right Image"
           initialClass={initial_BR}
           finalClass={final_BR}
           isAnimated={isAnimated}
@@ -136,25 +137,28 @@ export default function Hero() {
             loop
             muted
             playsInline
-            className='h-[150px] sm:h-[200px] md:h-[300px] w-auto object-contain mx-auto'>
-            <source src={logoVideo} type='video/webm' />
+            className="h-[150px] sm:h-[200px] md:h-[300px] w-auto object-contain mx-auto"
+          >
+            <source src={logoVideo} type="video/webm" />
             Your browser does not support the video tag.
           </video>
-          <h1 className='mt-4 sm:mt-6 text-5xl sm:text-7xl md:text-8xl lg:text-7xl text-brown font-primary font-medium tracking-tighter'>
+          <h1 className="mt-4 sm:mt-6 text-5xl sm:text-7xl md:text-8xl lg:text-7xl text-brown font-primary font-medium tracking-tighter">
             Experience the perfect blend of luxury and nature!
           </h1>
 
-          <h2 className='font-primary text-base sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10'>
-            Up to 22% ROI Annually | Clear Titles | Coffee Estates | Luxury Villas
+          <h2 className="font-primary text-base sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10">
+            Up to 22% ROI Annually | Clear Titles | Coffee Estates | Luxury
+            Villas
           </h2>
-          <p className='flex text-center justify-center items-center gap-2 text-brown font-primary pt-5'>
-            <MapPin className='text-brown-light w-5 h-5' />
+          <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5">
+            <MapPin className="text-brown-light w-5 h-5" />
             Janakere - Sakleshpur, Karnataka
           </p>
-          <div className='pt-12'>
+          <div className="pt-12">
             <button
-              className='font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer'
-              onClick={() => setIsFormOpen(true)}>
+              className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer"
+              onClick={() => setIsFormOpen(true)}
+            >
               Express Your Interest Now
             </button>
           </div>
@@ -164,14 +168,13 @@ export default function Hero() {
               isFormClose={() => setIsFormOpen(false)}
             />
           )}
-                  <div className='absolute top-1/8 -z-10 rotate-[30deg] right-1/8'>
-          <img
-            src={DC}
-            alt='DC converted site badge'
-            className='h-[250px] w-auto opacity-60'
-          />
-        </div>
-
+          <div className="absolute top-1/8 -z-10 rotate-[30deg] right-1/8">
+            <img
+              src={DC}
+              alt="DC converted site badge"
+              className="h-[250px] w-auto opacity-60"
+            />
+          </div>
         </div>
       </div>
       <div
@@ -180,54 +183,70 @@ export default function Hero() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className='md:hidden p-5 flex flex-col items-center'>
+        className="md:hidden p-5 flex flex-col items-center"
+      >
         <div className={`z-10 max-w-5xl ${textTransitionClass}`}>
           <video
             autoPlay
             loop
             muted
             playsInline
-            className='h-[150px] sm:h-[200px] md:h-[300px] w-auto object-contain mx-auto'>
-            <source src={logoVideo} type='video/webm' />
+            className="h-[150px] sm:h-[200px] md:h-[300px] w-auto object-contain mx-auto"
+          >
+            <source src={logoVideo} type="video/webm" />
             Your browser does not support the video tag.
           </video>
           <div>
-            <h1 className='mt-4 sm:mt-6 text-center text-2xl sm:text-7xl md:text-8xl lg:text-9xl text-brown font-primary font-medium tracking-tighter'>
+            <h1 className="mt-4 sm:mt-6 text-center text-2xl sm:text-7xl md:text-8xl lg:text-9xl text-brown font-primary font-medium tracking-tighter">
               Experience the perfect blend of luxury and nature
             </h1>
-            <h2 className='font-primary text-base text-center sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10'>
+            <h2 className="font-primary text-base text-center sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10">
               Up to 22% ROI Annually | Clear Titles | DC Converted Land
             </h2>
-            <p className='flex text-center justify-center items-center gap-2 text-brown font-primary pt-5'>
-              <MapPin className='text-brown-light w-5 h-5' />
+            <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5">
+              <MapPin className="text-brown-light w-5 h-5" />
               Janakere - Sakleshpur, Karnataka
             </p>
-            <div className='pt-12 flex justify-center'>
+            <div className="pt-12 flex justify-center">
               <button
-                className='font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer'
-                onClick={() => setIsFormOpen(true)}>
+                className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer"
+                onClick={() => setIsFormOpen(true)}
+              >
                 Express Your Interest Now
               </button>
             </div>
-            {isFormOpen && (
+           
+            <div className="flex justify-center items-center">
+              <img
+                src={DC}
+                alt="DC convereted site badge"
+                className="h-[150px] w-auto"
+              />
+            </div>
+          </div>
+          <div className="max-w-[400px] overflow-clip pt-10">
+            <ImageSlider />
+          </div>
+        </div>
+        <div
+          style={{
+            transform: "rotate(-90deg)",
+            right: "-40px",
+            textTransform: "uppercase",
+          }}
+          class="fixed bottom-[50%]  right-0 bg-brown text-white p-2 flex items-center justify-between shadow-lg md:hidden z-50"
+        >
+          <button className="" onClick={() => setIsFormOpen(true)}>
+           CONTACT US
+          </button>
+        </div>
+      </div>
+       {isFormOpen && (
               <Form
                 isFormOpen={isFormOpen}
                 isFormClose={() => setIsFormOpen(false)}
               />
             )}
-            <div className='flex justify-center items-center'>
-              <img
-                src={DC}
-                alt='DC convereted site badge'
-                className='h-[150px] w-auto'
-              />
-            </div>
-          </div>
-          <div className='max-w-[400px] overflow-clip pt-10'>
-            <ImageSlider />
-          </div>
-        </div>
-      </div>
     </>
   );
 }

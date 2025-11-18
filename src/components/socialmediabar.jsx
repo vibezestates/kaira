@@ -3,7 +3,7 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube, } from "react-icons/fa"
 const SocialMediaBar = () => {
   return (
     <div
-      className="fixed top-1/3 left-0 z-50 flex flex-col items-center space-y-6 p-4 rounded-r-2xl shadow-lg"
+      className="fixed top-1/3 left-0 z-50 flex flex-col items-center space-y-6 p-4 rounded-r-2xl shadow-lg hidden md:flex"
       style={{
         background: "linear-gradient(180deg, #982b04ff 0%, #e03a07ff 100%)", 
         backdropFilter: "blur(4px)",
