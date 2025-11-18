@@ -143,7 +143,7 @@ export default function Hero() {
             Your browser does not support the video tag.
           </video>
           <h1 className="mt-4 sm:mt-6 text-5xl sm:text-7xl md:text-8xl lg:text-7xl text-brown font-primary font-medium tracking-tighter">
-            Experience the perfect blend of luxury and nature!
+            Experience the perfect blend of luxury and nature
           </h1>
 
           <h2 className="font-primary text-base sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10">
