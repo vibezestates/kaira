@@ -246,7 +246,7 @@ export default function Hero() {
             right: "-40px",
             textTransform: "uppercase",
           }}
-          class="fixed bottom-[50%]  right-0 bg-brown text-white p-2 flex items-center justify-between shadow-lg md:hidden z-50"
+          className="fixed bottom-[50%]  right-0 bg-brown text-white p-2 flex items-center justify-between shadow-lg md:hidden z-50"
         >
           <button className="" onClick={() => setIsFormOpen(true)}>
             CONTACT US

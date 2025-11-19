@@ -49,7 +49,7 @@ export default function Form({ isMobile }) {
     try {
       const otpRes = await sendOtp(phoneNumber);
       await saveLead(payload);
-
+      
       if (otpRes.status === "success") {
         setStep(2);
         setMessage("OTP sent successfully!");
@@ -164,7 +164,7 @@ export default function Form({ isMobile }) {
 
                 {/* Message */}
                 {message && (
-                  <p className="text-red-600 text-sm mt-2">{message}</p>
+                  <p className="text-white text-sm mt-2">{message}</p>
                 )}
 
                 {/* Submit Button */}
@@ -179,13 +179,13 @@ export default function Form({ isMobile }) {
             )}
 
             {step === 2 && (
-              <div>
+              <div className="text-center">
                 <input
                   type="text"
                   placeholder="Enter OTP"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
-                  className="p-3 mb-3   w-[400px] d-block bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400"
+                  className="p-3 mb-3 w-full d-block bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400"
                   required
                 />
                 {/* 8. Remove onClick, type='submit' is all that's needed */}
