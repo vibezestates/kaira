@@ -10,7 +10,9 @@ export default function InvestmentSection() {
     {
       icon: <LandPlot className="w-10 h-10 text-brown-light" />,
       title: "₹849 per Sqft*",
+      titleStrike: "₹1050 per Sqft*",
       copy: "Own a luxurious retreat that doubles as a performing asset.",
+      copyOffer: "(Pre launch offer)",
     },
     {
       icon: <TrendingUp className="w-10 h-10 text-brown-light" />,
@@ -58,9 +60,23 @@ export default function InvestmentSection() {
             <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
               {item.icon}
             </div>
+            {
+              item.titleStrike ? (
+                <h3 className="font-secondary text-2xl sm:text-2xl font-bold text-brown-light mb-2 group-hover:text-brown transition-colors duration-300">
+                  <span className="line-through mr-2 text-brown-light/70">{item.titleStrike}</span>
+                </h3>
+              ) : null
+            }
             <h3 className="font-secondary text-2xl sm:text-3xl font-bold text-brown-light mb-2 group-hover:text-brown transition-colors duration-300">
               {item.title}
             </h3>
+            {
+              item.copyOffer ? (
+                <p className="text-md sm:text-lg md:text-xl font-semibold text-brown-light/90">
+                  {item.copyOffer}
+                </p>
+              ) : null
+            }
             <p className="text-md sm:text-lg md:text-xl font-light text-brown-light/90">
               {item.copy}
             </p>

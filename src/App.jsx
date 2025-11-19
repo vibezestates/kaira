@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import Reactm, { useState } from 'react'
 import './App.css'
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -19,6 +19,8 @@ import LayoutandConfig from './components/LayoutandConfig';
 import Awards from './components/awards';
 import Testimonials from './components/testimonials';
 import SocialMediaBar from './components/socialmediabar';
+import ReviewSlider from './components/ReviewSlider';
+
 function App() {
 
   return (
@@ -31,13 +33,14 @@ function App() {
       {/* <Experience/> */}
       <LayoutandConfig/>
       {/* <AmenitiesSection /> */}
-      <Coffee />
+      {/* <Coffee /> */}
       {/* <Store /> */}
       {/* <WhyChooseKaira /> */}
       <KairaGallery />
       <WhoWeAreSlide />
       {/* <Awards /> */}
-      <Testimonials />
+      <ReviewSlider />
+      {/* <Testimonials /> */}
       <Envelope />
       <Footer />
       <WhatsAppButton/>

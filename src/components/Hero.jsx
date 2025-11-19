@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
-import logoVideo from "../assets/vedio/kaira_logo_ved.webm";
 import logoIMG from "../assets/images/kaira-logo.webp";
 import background from "../assets/images/Hero-background.webp";
 import ImageSlider from "./ImageSlider";
 import Form from "./Form";
-import DC from "../assets/images/DC_Converted.png";
-
+import HorizontalForm from "./HorizontalForm";
 import image1 from "../assets/images/image1.webp";
 import image2 from "../assets/images/image2.webp";
 import image3 from "../assets/images/image3.webp";
@@ -152,35 +150,36 @@ export default function Hero() {
             Experience the perfect blend of luxury and nature
           </h1>
 
-          <h2 className="font-primary text-base sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10">
-            Up to 22% ROI Annually | Clear Titles | Coffee Estates | Luxury
-            Villas
+          <h2 className="font-primary text-base sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-1 ">
+            Up to 22% ROI Annually | Clear Titles | Coffee Estates | Coffee
+            Estate Plots
           </h2>
           <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5">
             <MapPin className="text-brown-light w-5 h-5" />
             Janakere - Sakleshpur, Karnataka
           </p>
+          <HorizontalForm />
           <div className="pt-12">
-            <button
+            {/* <button
               className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer"
               onClick={() => setIsFormOpen(true)}
             >
               Express Your Interest Now
-            </button>
+            </button> */}
           </div>
-          {isFormOpen && (
+          {/* {isFormOpen && (
             <Form
               isFormOpen={isFormOpen}
               isFormClose={() => setIsFormOpen(false)}
             />
-          )}
-          <div className="absolute top-1/8 -z-10 rotate-[30deg] right-1/8">
+          )} */}
+          {/* <div className="absolute top-1/8 -z-10 rotate-[30deg] right-1/8">
             <img
               src={DC}
               alt="DC converted site badge"
               className="h-[250px] w-auto opacity-60"
             />
-          </div>
+          </div> */}
         </div>
       </div>
       <div
@@ -212,32 +211,34 @@ export default function Hero() {
               Experience the perfect blend of luxury and nature
             </h1>
             <h2 className="font-primary text-base text-center sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-4 sm:px-10">
-              Up to 22% ROI Annually | Clear Titles | DC Converted Land
+              Up to 22% ROI Annually | Clear Titles | Coffee Estates | Coffee
+              Estate Plots
             </h2>
             <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5">
               <MapPin className="text-brown-light w-5 h-5" />
               Janakere - Sakleshpur, Karnataka
             </p>
-            <div className="pt-12 flex justify-center">
+            <HorizontalForm isMobile={true} />
+            {/* <div className="pt-12 flex justify-center">
               <button
                 className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer"
                 onClick={() => setIsFormOpen(true)}
               >
                 Express Your Interest Now
               </button>
-            </div>
+            </div> */}
 
-            <div className="flex justify-center items-center">
+            {/* <div className="flex justify-center items-center">
               <img
                 src={DC}
                 alt="DC convereted site badge"
                 className="h-[150px] w-auto"
               />
-            </div>
+            </div> */}
           </div>
-          <div className="max-w-[400px] overflow-clip pt-4">
+          {/* <div className="max-w-[400px] overflow-clip pt-4">
             <ImageSlider />
-          </div>
+          </div> */}
         </div>
         <div
           style={{

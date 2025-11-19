@@ -1,6 +1,7 @@
 import { useState } from "react";
 import bgimg from "../assets/images/experience-background.webp";
 import coffeeplantaions from "../assets/images/coffee-plantations.webp";
+import ImageSlider from "./ImageSlider";
 import Form from "./Form";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -20,7 +21,7 @@ export default function Welcome() {
         {/* Left Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-secondary sm:text-6xl md:text-5xl font-bold tracking-tighter pb-6 text-brown">
-            Welcome to Kaira
+            Welcome to Kaira Estate Plots
           </h2>
 
           <p className="text-base sm:text-lg md:text-xl text-brown leading-relaxed mb-2 md:mb-6">
@@ -76,12 +77,15 @@ export default function Welcome() {
 
         {/* Right Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div className="w-full max-w-md sm:max-w-lg md:max-w-[90%] h-96 rounded-3xl overflow-hidden bg-gray-100">
+          <div className="w-full hidden md:block max-w-md sm:max-w-lg md:max-w-[90%] h-96 rounded-3xl overflow-hidden bg-gray-100">
             <img
               src={coffeeplantaions}
               alt="coffee-plantations"
               className="w-full h-full object-cover"
             />
+          </div>
+          <div className="max-w-[400px] overflow-clip pt-4 block md:hidden">
+            <ImageSlider />
           </div>
         </div>
       </div>

@@ -185,8 +185,7 @@ const LayoutAndConfig = () => {
           <p className="text-brown text-sm italic mt-2">
             *Layout – for illustration purposes only.
           </p>
-        </motion.div> */}
-
+        </motion.div> 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -195,9 +194,10 @@ const LayoutAndConfig = () => {
         >
           Visit our Site and Explore the Clusters!
         </motion.h2>
+*/}
 
         {/* Clusters Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
+        {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
           {clusters.map((cluster, index) => (
             <motion.div
               key={index}
@@ -215,7 +215,7 @@ const LayoutAndConfig = () => {
               <p className="text-gray-600 mt-1 text-sm">{cluster.desc}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         {/* Modal */}
         <AnimatePresence>

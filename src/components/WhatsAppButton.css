@@ -51,3 +51,56 @@ html, body {
     height: 25px;
   }
 }
+
+
+/* Wrapper for both buttons */
+.floating-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column; /* one above another */
+  gap: 12px; /* space between buttons */
+
+  z-index: 9999;
+}
+
+/* Circle buttons */
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  background: #52ce5f;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease;
+
+}
+.floating-btn.call-btn {
+  width: 60px;
+  height: 60px;
+  background: #52ce5f;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease;
+
+}
+
+.floating-btn img {
+  width: 34px;
+  height: 34px;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+}
