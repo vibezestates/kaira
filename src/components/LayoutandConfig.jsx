@@ -22,7 +22,7 @@ import unnataIcon from "../assets/images/unnata.webp";
 // Cluster backgrounds
 import adhbhutaBG from "../assets/images/cluster-bg/Adbhuta.png";
 import sarovaraBG from "../assets/images/cluster-bg/Sarovara.png";
-import vatikaBG from "../assets/images/cluster-bg/vatika.png";
+import vatikaBG from "../assets/images/cluster-bg/VATIKA.png";
 import samahitaBG from "../assets/images/cluster-bg/SAMAHITA.png";
 import unnataBG from "../assets/images/cluster-bg/Unnata.png";
 
