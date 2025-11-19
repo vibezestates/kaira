@@ -77,15 +77,12 @@ export default function Welcome() {
 
         {/* Right Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <div className="w-full hidden md:block max-w-md sm:max-w-lg md:max-w-[90%] h-96 rounded-3xl overflow-hidden bg-gray-100">
+          <div className="w-full  max-w-md sm:max-w-lg md:max-w-[90%] h-96 rounded-3xl overflow-hidden bg-gray-100">
             <img
               src={coffeeplantaions}
               alt="coffee-plantations"
               className="w-full h-full object-cover"
             />
-          </div>
-          <div className="max-w-[400px] overflow-clip pt-4 block md:hidden">
-            <ImageSlider />
           </div>
         </div>
       </div>

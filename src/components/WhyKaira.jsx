@@ -3,6 +3,7 @@ import bgimg from "../assets/images/experience-background.webp";
 import villa from "../assets/images/villa.webp";
 import Form from "./Form";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import ImageSlider from "./ImageSlider";
 
 export default function WhyKaira() {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -82,13 +83,16 @@ export default function WhyKaira() {
         </div>
 
         {/* Right Image */}
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div className="w-full hidden md:block md:w-1/2 flex justify-center md:justify-end">
           <img
             src={villa}
             alt="villa"
             className="w-full max-w-md sm:max-w-lg md:max-w-[90%] h-auto rounded-3xl"
           />
         </div>
+         <div className="max-w-[400px] overflow-clip pt-4 block md:hidden">
+            <ImageSlider />
+          </div>
       </div>
     </section>
   );
