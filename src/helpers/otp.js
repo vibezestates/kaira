@@ -2,7 +2,7 @@
 
 export const sendOtp = async (phoneNumber) => {
   const payload = { phone: phoneNumber };
-  const res = await fetch("http://93.127.195.157/api/send-otp", {
+  const res = await fetch("/api/send-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -12,7 +12,7 @@ export const sendOtp = async (phoneNumber) => {
 };
 
 export const verifyOtp = async (phoneNumber, otp) => {
-  const res = await fetch("http://93.127.195.157/api/verify-otp", {
+  const res = await fetch("/api/verify-otp", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ phone:phoneNumber, otp: otp }),
@@ -23,7 +23,7 @@ export const verifyOtp = async (phoneNumber, otp) => {
 
 export const saveLead = async (data) => {
   try {
-    const response = await fetch("http://93.127.195.157/api/save-lead", {
+    const response = await fetch("/api/save-lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
