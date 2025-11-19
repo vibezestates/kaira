@@ -29,35 +29,35 @@ const clusters = [
   {
     title: "Adbhuta",
     desc: "The Forest Cluster",
-    image: "src/assets/images/adhbhuta.png",
+    image: "src/assets/images/adhbhuta.webp",
     bgImage: "src/assets/images/cluster-bg/Adbhuta.png",
     modalContent: `Adbhuta is a sanctuary within a sanctuary. Wrapped in dense green canopies, these plots blur the boundary between wilderness and dwelling. Sunlight seeps through layered leaves, birds nest close, and the air feels ancient. Building here is less about architecture and more about reverence; creating space within the forest, not against it. For those who seek solitude, Adbhuta offers the purest form of escape. Where silence hums, shadows dance, and time itself slows down.`,
   },
   {
     title: "Sarovara",
     desc: "The Lakeview Cluster",
-    image: "src/assets/images/sarovara.png",
+    image: "src/assets/images/sarovara.webp",
     bgImage: "src/assets/images/cluster-bg/Sarovara.png",
     modalContent: `Perched at the water’s edge, Sarovara reflects the soul of stillness. The lake stretches like liquid glass, mirroring the sky’s moods from dawn’s first blush to twilight’s hush. Each plot here commands uninterrupted views of the horizon, where the light shifts and the air carries the calm of distance. Designed for those who crave privacy and poetry, Sarovara transforms living into a lakeside meditation. To live here is to own not just land, but a horizon that changes with you.`,
   },
   {
     title: "Vatika",
     desc: "The Garden Cluster",
-    image: "src/assets/images/vatika.png",
-    bgImage: "src/assets/images/cluster-bg/VATIKA.png",
+    image: "src/assets/images/vatika.webp",
+    bgImage: "src/assets/images/cluster-bg/vatika.png",
     modalContent: `Vatika is where architecture and botany intertwine. Each plot unfolds into its own garden. Lawns kissed by dew, shaded paths lined with jasmine and frangipani, corners designed for morning reflection or evening tea. The landscaping is intentional yet effortless, merging curated beauty with organic growth. Here, the garden is not ornamental; it is emotional. A daily invitation to reconnect with stillness. Artfully designed yet deeply alive; a living portrait that grows with its residents, season after season.`,
   },
   {
     title: "Samahita",
     desc: "The Balanced Cluster",
-    image: "src/assets/images/samahita.png",
+    image: "src/assets/images/samahita.webp",
     bgImage: "src/assets/images/cluster-bg/SAMAHITA.png",
     modalContent: `Samahita means harmony and that is exactly what it offers. Perfectly contoured plots that balance value with vision, simplicity with serenity. Here, every home is an expression of grounded elegance; thoughtfully placed, open to the sky, rooted in the earth. The design philosophy celebrates proportion over grandeur, comfort over excess. For families who seek connection over indulgence, Samahita represents the quiet strength of balance; where living well means living wisely.`,
   },
   {
     title: "Unnata",
     desc: "The Elevated Cluster",
-    image: "src/assets/images/unnata.png",
+    image: "src/assets/images/unnata.webp",
     bgImage: "src/assets/images/cluster-bg/Unnata.png",
     modalContent: `Rising along Sakleshpur’s gentle slopes, Unnata lives up to its name; The Elevated. From here, the hills unfold like a painting in motion, each layer of mist revealing a new horizon. The land’s natural gradient lends every villa a view, every breath a breeze. This elevation isn’t just topographical, it’s spiritual. To stand here is to feel lifted in every sense: above the noise, beyond the rush, closer to the clouds. Unnata is a vantage point for vision, for perspective, for peace.`,
   },
@@ -86,7 +86,7 @@ const clusters = [
           className="relative mb-12"
         >
           <img
-            src="src/assets/images/Kaira_Masterplan.png"
+            src="src/assets/images/Kaira_Masterplan.webp"
             alt="Project Layout Map"
             className="rounded-2xl shadow-lg w-full object-cover"
           />

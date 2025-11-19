@@ -78,7 +78,7 @@ const ImageSlider = () => {
         slidesPerView={'auto'} // Shows a dynamic number of slides  
         
         // Tailwind classes for the wrapper
-        className="h-96" 
+        className="h-auto md:h-96" 
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="!w-64"> {/* Set a fixed width for slides */}

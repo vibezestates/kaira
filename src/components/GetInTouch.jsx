@@ -49,11 +49,11 @@ export default function InvestmentSection() {
       </div>
 
       {/* Interactive Highlight Tiles */}
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 sm:px-10 md:px-16 lg:px-24">
+      <div className="mt-12 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-6 sm:px-10 md:px-16 lg:px-24">
         {highlights.map((item, index) => (
           <div
             key={index}
-            className="group bg-[#F3E7D3]/20 hover:bg-[#F3E7D3]/40 rounded-3xl p-8 shadow-md border border-[#F3E7D3]/30 transition-all duration-300 cursor-pointer flex flex-col items-center text-center"
+            className="group bg-[#F3E7D3]/20 hover:bg-[#F3E7D3]/40 rounded-3xl p-4 md:p-8 shadow-md border border-[#F3E7D3]/30 transition-all duration-300 cursor-pointer flex flex-col items-center text-center"
           >
             <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
               {item.icon}

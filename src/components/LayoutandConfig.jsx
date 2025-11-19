@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // ✅ Import all images properly so Vite/Next bundler can resolve them
 import bgimg from "../assets/images/experience-background.webp";
-import masterplan from "../assets/images/Kaira_Masterplan.png";
+import masterplan from "../assets/images/Kaira_Masterplan.webp";
 import villaPlot from "../assets/images/VillaPlot.png";
 import estateLayout from "../assets/images/2.png";
 
@@ -13,16 +13,16 @@ import oneBHK from "../assets/images/1BHK.png";
 import twoBHK from "../assets/images/2BHK.png";
 
 // Cluster images
-import adhbhutaIcon from "../assets/images/adhbhuta.png";
-import sarovaraIcon from "../assets/images/sarovara.png";
-import vatikaIcon from "../assets/images/vatika.png";
-import samahitaIcon from "../assets/images/samahita.png";
-import unnataIcon from "../assets/images/unnata.png";
+import adhbhutaIcon from "../assets/images/adhbhuta.webp";
+import sarovaraIcon from "../assets/images/sarovara.webp";
+import vatikaIcon from "../assets/images/vatika.webp";
+import samahitaIcon from "../assets/images/samahita.webp";
+import unnataIcon from "../assets/images/unnata.webp";
 
 // Cluster backgrounds
 import adhbhutaBG from "../assets/images/cluster-bg/Adbhuta.png";
 import sarovaraBG from "../assets/images/cluster-bg/Sarovara.png";
-import vatikaBG from "../assets/images/cluster-bg/VATIKA.png";
+import vatikaBG from "../assets/images/cluster-bg/vatika.png";
 import samahitaBG from "../assets/images/cluster-bg/SAMAHITA.png";
 import unnataBG from "../assets/images/cluster-bg/Unnata.png";
 
@@ -119,16 +119,16 @@ const LayoutAndConfig = () => {
         </motion.div>
 
         {/* Villa Plots */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="font-secondary text-3xl md:text-4xl font-bold text-brown mb-10"
         >
           Villa Plots & Configurations
-        </motion.h2>
+        </motion.h2> */}
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -142,10 +142,10 @@ const LayoutAndConfig = () => {
           <p className="text-brown text-sm italic mt-2">
             *Layout – for illustration purposes only.
           </p>
-        </motion.div>
+        </motion.div> */}
 
         {/* Configurations Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center mb-20">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center mb-20">
           {configurations.map((config, index) => (
             <motion.div
               key={index}
@@ -159,10 +159,10 @@ const LayoutAndConfig = () => {
               <p className="text-brown underline mt-3 text-sm">View Layout</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
 
         {/* Estate Plots & Clusters */}
-        <motion.h2
+        {/* <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -185,7 +185,7 @@ const LayoutAndConfig = () => {
           <p className="text-brown text-sm italic mt-2">
             *Layout – for illustration purposes only.
           </p>
-        </motion.div>
+        </motion.div> */}
 
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -197,7 +197,7 @@ const LayoutAndConfig = () => {
         </motion.h2>
 
         {/* Clusters Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
           {clusters.map((cluster, index) => (
             <motion.div
               key={index}

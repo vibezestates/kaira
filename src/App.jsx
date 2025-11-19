@@ -24,19 +24,19 @@ function App() {
   return (
     <>
       <Hero/>
-      <Logo />
+      {/* <Logo /> */}
       <Welcome />
       <GetInTouch />
       <WhyKaira />
-      <Experience/>
+      {/* <Experience/> */}
       <LayoutandConfig/>
-      <AmenitiesSection />
+      {/* <AmenitiesSection /> */}
       <Coffee />
-      <Store />
-      <WhyChooseKaira />
+      {/* <Store /> */}
+      {/* <WhyChooseKaira /> */}
       <KairaGallery />
       <WhoWeAreSlide />
-      <Awards />
+      {/* <Awards /> */}
       <Testimonials />
       <Envelope />
       <Footer />

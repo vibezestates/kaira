@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { MapPin } from "lucide-react";
 import logoVideo from "../assets/vedio/kaira_logo_ved.webm";
+import logoIMG from "../assets/images/kaira-logo.webp";
 import background from "../assets/images/Hero-background.webp";
 import ImageSlider from "./ImageSlider";
 import Form from "./Form";
@@ -132,7 +133,7 @@ export default function Hero() {
 
         {/* Main content */}
         <div className={`z-10 max-w-5xl ${textTransitionClass}`}>
-          <video
+          {/* <video
             autoPlay
             loop
             muted
@@ -141,7 +142,12 @@ export default function Hero() {
           >
             <source src={logoVideo} type="video/webm" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
+          <img
+            src={logoIMG}
+            alt="Kaira Logo"
+            className="h-[150px] sm:h-[200px] md:h-[300px] w-auto object-contain mx-auto"
+          />
           <h1 className="mt-4 sm:mt-6 text-5xl sm:text-7xl md:text-8xl lg:text-7xl text-brown font-primary font-medium tracking-tighter">
             Experience the perfect blend of luxury and nature
           </h1>
@@ -186,7 +192,7 @@ export default function Hero() {
         className="md:hidden p-5 flex flex-col items-center"
       >
         <div className={`z-10 max-w-5xl ${textTransitionClass}`}>
-          <video
+          {/* <video
             autoPlay
             loop
             muted
@@ -195,7 +201,12 @@ export default function Hero() {
           >
             <source src={logoVideo} type="video/webm" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
+          <img
+            src={logoIMG}
+            alt="Kaira Logo"
+            className="h-[150px] sm:h-[200px] md:h-[300px] w-auto object-contain mx-auto"
+          />
           <div>
             <h1 className="mt-4 sm:mt-6 text-center text-2xl sm:text-7xl md:text-8xl lg:text-9xl text-brown font-primary font-medium tracking-tighter">
               Experience the perfect blend of luxury and nature
@@ -215,7 +226,7 @@ export default function Hero() {
                 Express Your Interest Now
               </button>
             </div>
-           
+
             <div className="flex justify-center items-center">
               <img
                 src={DC}
@@ -224,7 +235,7 @@ export default function Hero() {
               />
             </div>
           </div>
-          <div className="max-w-[400px] overflow-clip pt-10">
+          <div className="max-w-[400px] overflow-clip pt-4">
             <ImageSlider />
           </div>
         </div>
@@ -237,16 +248,16 @@ export default function Hero() {
           class="fixed bottom-[50%]  right-0 bg-brown text-white p-2 flex items-center justify-between shadow-lg md:hidden z-50"
         >
           <button className="" onClick={() => setIsFormOpen(true)}>
-           CONTACT US
+            CONTACT US
           </button>
         </div>
       </div>
-       {isFormOpen && (
-              <Form
-                isFormOpen={isFormOpen}
-                isFormClose={() => setIsFormOpen(false)}
-              />
-            )}
+      {isFormOpen && (
+        <Form
+          isFormOpen={isFormOpen}
+          isFormClose={() => setIsFormOpen(false)}
+        />
+      )}
     </>
   );
 }

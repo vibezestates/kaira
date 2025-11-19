@@ -9,20 +9,21 @@ export default function Welcome() {
 
   return (
     <section
-      className='py-8 sm:py-8 md:p8 font-primary'
+      className="py-6 md:py-8 md:p8 font-primary"
       style={{
         backgroundImage: `url(${bgimg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-      }}>
-      <div className='flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 sm:px-10 md:px-16'>
+      }}
+    >
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 px-6 sm:px-10 md:px-16">
         {/* Left Content */}
-        <div className='w-full md:w-1/2 text-center md:text-left'>
-          <h2 className='text-4xl font-secondary sm:text-6xl md:text-5xl font-bold tracking-tighter pb-6 text-brown'>
+        <div className="w-full md:w-1/2 text-center md:text-left">
+          <h2 className="text-4xl font-secondary sm:text-6xl md:text-5xl font-bold tracking-tighter pb-6 text-brown">
             Welcome to Kaira
           </h2>
 
-          <p className='text-base sm:text-lg md:text-xl text-brown leading-relaxed mb-8'>
+          <p className="text-base sm:text-lg md:text-xl text-brown leading-relaxed mb-2 md:mb-6">
             Welcome to Kaira, luxury villas nestled in the serene landscapes of
             Sakleshpur, Hassan District. Spread across 40 acres of pristine
             greenery, Kaira offers a rare opportunity to own your personal piece
@@ -36,34 +37,33 @@ export default function Welcome() {
           </p>
 
           {/* Icons Row */}
-          <div className='flex flex-wrap justify-center md:justify-start gap-4 text-lg sm:text-xl font-medium text-brown'>
+          {/* <div className='flex flex-wrap justify-center md:justify-start gap-4 text-lg sm:text-xl font-medium text-brown'>
             <p>🏆 Since 2009</p>
             <span className='hidden sm:inline'>|</span>
             <p>😊 1000+ Customers</p>
             <span className='hidden sm:inline'>|</span>
             <p>🏗️ 16+ Completed Projects</p>
-          </div>
+          </div> */}
 
           {/* CTA Button */}
-          <div className="pt-10 flex flex-col items-center gap-6">
-  <button
-    className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer w-auto min-w-[220px] sm:min-w-[260px] md:min-w-[300px] h-14 sm:h-16 md:h-18"
-    onClick={() => setIsFormOpen(true)}
-  >
-    Avail the Unbeatable Offer Now
-  </button>
+          <div className="pt-4 flex flex-col items-center gap-6">
+            <button
+              className="font-secondary font-bold md:text-lg text-sm md:text-2xl text-brown px-3 py-2 md:px-8 md:py-4  rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer w-auto min-w-[220px] sm:min-w-[260px] md:min-w-[300px] h-14 sm:h-16 md:h-18"
+              onClick={() => setIsFormOpen(true)}
+            >
+              Avail the Unbeatable Offer Now
+            </button>
 
-  <a
-    href="https://wa.me/15551234567"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center justify-center gap-2 font-secondary font-bold text-lg sm:text-xl md:text-2xl text-green-600 px-8 py-4 rounded-[55px] border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300 cursor-pointer w-auto min-w-[220px] sm:min-w-[260px] md:min-w-[300px] h-14 sm:h-16 md:h-18"
-  >
-    <FaWhatsapp className="text-2xl" />
-    Chat on WhatsApp
-  </a>
-</div>
-
+            <a
+              href="https://wa.me/15551234567"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 font-secondary font-bold md:text-lg text-sm md:text-2xl text-green-600 px-8 py-4 rounded-[55px] border-2 border-green-600 hover:bg-green-600 hover:text-white transition duration-300 cursor-pointer w-auto min-w-[220px] sm:min-w-[260px] md:min-w-[300px] h-14 sm:h-16 md:h-18"
+            >
+              <FaWhatsapp className="text-2xl" />
+              Chat on WhatsApp
+            </a>
+          </div>
 
           {/* Popup Form */}
           {isFormOpen && (
@@ -76,15 +76,14 @@ export default function Welcome() {
 
         {/* Right Image */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-  <div className="w-full max-w-md sm:max-w-lg md:max-w-[90%] h-96 rounded-3xl overflow-hidden bg-gray-100">
-    <img
-      src={coffeeplantaions}
-      alt="coffee-plantations"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
-
+          <div className="w-full max-w-md sm:max-w-lg md:max-w-[90%] h-96 rounded-3xl overflow-hidden bg-gray-100">
+            <img
+              src={coffeeplantaions}
+              alt="coffee-plantations"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
