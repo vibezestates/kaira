@@ -40,7 +40,7 @@ export default function WhyKaira() {
         {/* Left Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className="text-4xl font-secondary sm:text-6xl md:text-5xl font-bold tracking-tighter pb-6 text-brown">
-            Why Own a Kaira Villa?
+            Why Own a Kaira Estate Plots?
           </h2>
 
           {/* Points List */}
