@@ -34,7 +34,7 @@ export default function Welcome() {
             With 16+ completed projects and 1000+ satisfied customers, Vibez
             Estates continues to redefine sustainable luxury. Located just 3
             hours from Mysore and Mangalore airports, this is your golden chance
-            to own a luxury villa that blends nature and investment beautifully.
+            to own a luxury estate plots that blends nature and investment beautifully.
           </p>
 
           {/* Icons Row */}
