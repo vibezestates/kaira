@@ -154,9 +154,9 @@ export default function Hero() {
             Up to 22% ROI Annually | Clear Titles | Coffee Estates | Coffee
             Estate Plots
           </h2>
-          <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5">
+          <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5" style={{ fontSize:"22px" }}>
             <MapPin className="text-brown-light w-5 h-5" />
-            Janakere - Sakleshpur, Karnataka
+            Sakleshpur, Karnataka
           </p>
           <HorizontalForm />
           <div className="pt-12">
@@ -214,9 +214,9 @@ export default function Hero() {
               Up to 22% ROI Annually | Clear Titles | Coffee Estates | Coffee
               Estate Plots
             </h2>
-            <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5">
+            <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5" style={{fontSize:"18px"}}>
               <MapPin className="text-brown-light w-5 h-5" />
-              Janakere - Sakleshpur, Karnataka
+              Sakleshpur, Karnataka
             </p>
             <HorizontalForm isMobile={true} />
             {/* <div className="pt-12 flex justify-center">
