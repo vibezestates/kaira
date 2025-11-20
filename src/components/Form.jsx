@@ -22,6 +22,9 @@ export default function Form({ isFormOpen, isFormClose }) {
   }
 
   async function submitAction(formElement) {
+    const gclid = localStorage.getItem("gclid");
+    console.log("GCid", gclid);
+    
     setLoading(true);
     setMessage("");
 
@@ -45,7 +48,7 @@ export default function Form({ isFormOpen, isFormClose }) {
     // Save all form data to state for later
     const pageUrl = window.location.href;
     setFormData({ name, email, phoneNumber, pageUrl });
-    const payload = { name, email, phoneNumber, pageUrl };
+    const payload = { name, email, phoneNumber, pageUrl,gclid };
     try {
      
       const otpRes = await sendOtp(phoneNumber);

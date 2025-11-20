@@ -1,4 +1,4 @@
-import Reactm, { useState } from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import Hero from './components/Hero';
 import Experience from './components/Experience';
@@ -22,6 +22,17 @@ import SocialMediaBar from './components/socialmediabar';
 import ReviewSlider from './components/ReviewSlider';
 
 function App() {
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const gclid = params.get("gclid");
+
+    if (gclid) {
+      localStorage.setItem("gclid", gclid);
+    } else {
+      localStorage.setItem("gclid", "");
+
+    }
+  }, []);
 
   return (
     <>

@@ -22,6 +22,9 @@ export default function Form({ isMobile }) {
   }
 
   async function submitAction(formElement) {
+    const gclid = localStorage.getItem("gclid");
+    console.log("gclid",gclid);
+    
     setLoading(true);
     setMessage("");
 
@@ -45,7 +48,7 @@ export default function Form({ isMobile }) {
     // Save all form data to state for later
     const pageUrl = window.location.href;
     setFormData({ name, email, phoneNumber, pageUrl });
-    const payload = { name, email, phoneNumber, pageUrl };
+    const payload = { name, email, phoneNumber, pageUrl, gclid };
     try {
       const otpRes = await sendOtp(phoneNumber);
       await saveLead(payload);
