@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FaHome, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-
+import Form from "./Form";
 // ✅ Import all images properly so Vite/Next bundler can resolve them
 import bgimg from "../assets/images/experience-background.webp";
 import masterplan from "../assets/images/Kaira_Masterplan.webp";
@@ -28,7 +28,7 @@ import unnataBG from "../assets/images/cluster-bg/Unnata.png";
 
 const LayoutAndConfig = () => {
   const [selectedConfig, setSelectedConfig] = useState(null);
-
+  const [isFormOpen, setIsFormOpen] = useState(false);
   const configurations = [
     {
       title: "1 BHK Villa",
@@ -111,113 +111,18 @@ const LayoutAndConfig = () => {
           <img
             src={masterplan}
             alt="Project Layout Map"
-            className="rounded-2xl shadow-lg w-full object-cover"
+            className="rounded-2xl shadow-lg w-full object-cover blur-[3px] cursor-pointer"
+            onClick={() => setIsFormOpen(true)}
           />
           <p className="text-brown text-sm italic mt-2">
             *Project Master Layout – for illustration purposes only.
           </p>
         </motion.div>
 
-        {/* Villa Plots */}
-        {/* <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-secondary text-3xl md:text-4xl font-bold text-brown mb-10"
-        >
-          Villa Plots & Configurations
-        </motion.h2> */}
-
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative mb-12"
-        >
-          <img
-            src={villaPlot}
-            alt="Villa Plots Layout"
-            className="rounded-2xl shadow-lg w-full object-cover"
-          />
-          <p className="text-brown text-sm italic mt-2">
-            *Layout – for illustration purposes only.
-          </p>
-        </motion.div> */}
-
-        {/* Configurations Grid */}
-        {/* <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center mb-20">
-          {configurations.map((config, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              onClick={() => setSelectedConfig(config)}
-              className="flex flex-col items-center border-2 border-brown rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer w-full sm:w-80"
-            >
-              <FaHome className="text-brown text-4xl mb-3" />
-              <h3 className="text-xl font-bold text-brown">{config.title}</h3>
-              <p className="text-gray-600 mt-2">{config.desc}</p>
-              <p className="text-brown underline mt-3 text-sm">View Layout</p>
-            </motion.div>
-          ))}
-        </div> */}
-
-        {/* Estate Plots & Clusters */}
-        {/* <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-secondary text-3xl md:text-4xl font-bold text-brown mb-10"
-        >
-          Estate Plots & Clusters
-        </motion.h2>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="relative mb-12"
-        >
-          <img
-            src={estateLayout}
-            alt="Estate Layout"
-            className="rounded-2xl shadow-lg w-full object-cover"
-          />
-          <p className="text-brown text-sm italic mt-2">
-            *Layout – for illustration purposes only.
-          </p>
-        </motion.div> 
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="font-secondary text-3xl md:text-4xl font-bold text-brown mb-10"
-        >
-          Visit our Site and Explore the Clusters!
-        </motion.h2>
-*/}
-
-        {/* Clusters Grid */}
-        {/* <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 justify-items-center">
-          {clusters.map((cluster, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05, y: -5 }}
-              transition={{ duration: 0.3 }}
-              onClick={() => setSelectedConfig(cluster)}
-              className="flex flex-col items-center border-2 border-brown rounded-2xl p-6 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer w-full sm:w-46"
-            >
-              <img
-                src={cluster.image}
-                alt={cluster.title}
-                className="w-16 h-16 object-contain mb-4"
-              />
-              <h3 className="text-lg font-bold text-brown">{cluster.title}</h3>
-              <p className="text-gray-600 mt-1 text-sm">{cluster.desc}</p>
-            </motion.div>
-          ))}
-        </div> */}
-
-        {/* Modal */}
+        {/* Form Modal */}
+        {isFormOpen && (
+          <Form isFormOpen={isFormOpen} isFormClose={() => setIsFormOpen(false)} />
+        )}
         <AnimatePresence>
           {selectedConfig && (
             <motion.div

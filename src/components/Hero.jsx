@@ -151,7 +151,7 @@ export default function Hero() {
           </h1>
 
           <h2 className="font-primary text-base sm:text-xl md:text-2xl lg:text-3xl text-brown mt-4 tracking-tighter px-1 ">
-            Up to 22% ROI Annually | Clear Titles | Coffee Estates | Coffee
+            Up to 22% ROI Annually | Clear Titles | Coffee
             Estate Plots
           </h2>
           <p className="flex text-center justify-center items-center gap-2 text-brown font-primary pt-5" style={{ fontSize:"22px" }}>
