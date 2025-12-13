@@ -1,63 +1,15 @@
-import React, { useEffect } from 'react'
-import './App.css'
-import Hero from './components/Hero';
-import Experience from './components/Experience';
-import Coffee from './components/Coffee';
-import Store from './components/Store';
-import GetInTouch from './components/GetInTouch';
-import Footer from './components/Footer';
-import Logo from './components/Logo';
-import Envelope from './components/Envelope';
-import AmenitiesSection from "./components/AmenitiesSection";
-import KairaGallery from './components/KairaGallery';
-import WhoWeAreSlide from './components/WhoWeAreSlide';
-import Welcome from './components/Welcome';
-import WhyChooseKaira from './components/Whychoosekaira';
-import WhyKaira from './components/WhyKaira';
-import WhatsAppButton from './components/WhatsAppButton';
-import LayoutandConfig from './components/LayoutandConfig';
-import Awards from './components/awards';
-import Testimonials from './components/testimonials';
-import SocialMediaBar from './components/socialmediabar';
-import ReviewSlider from './components/ReviewSlider';
 
-function App() {
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const gclid = params.get("gclid");
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/Home'
 
-    if (gclid) {
-      localStorage.setItem("gclid", gclid);
-    } else {
-      localStorage.setItem("gclid", "");
+import ThankYou from './components/ThankYou'
 
-    }
-  }, []);
-
+export default function App() {
   return (
-    <>
-      <Hero/>
-      {/* <Logo /> */}
-      <Welcome />
-      <GetInTouch />
-      <WhyKaira />
-      {/* <Experience/> */}
-      <LayoutandConfig/>
-      {/* <AmenitiesSection /> */}
-      {/* <Coffee /> */}
-      {/* <Store /> */}
-      {/* <WhyChooseKaira /> */}
-      <KairaGallery />
-      <WhoWeAreSlide />
-      {/* <Awards /> */}
-      <ReviewSlider />
-      {/* <Testimonials /> */}
-      <Envelope />
-      <Footer />
-      <WhatsAppButton/>
-      <SocialMediaBar />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/thank-you" element={<ThankYou />} />
+    </Routes>
   )
 }
-
-export default App

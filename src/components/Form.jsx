@@ -2,13 +2,14 @@ import { useState } from "react";
 import image from "../assets/images/fromImage.webp";
 import ModalBase from "./ModalBase";
 import { sendOtp, verifyOtp, saveLead } from "../helpers/otp";
+import { useNavigate } from 'react-router-dom'
 
 export default function Form({ isFormOpen, isFormClose }) {
   const [step, setStep] = useState(1);
   const [otp, setOtp] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
+const navigate = useNavigate();
   const [formData, setFormData] = useState(null);
 
   async function handleSubmit(e) {
@@ -32,7 +33,7 @@ export default function Form({ isFormOpen, isFormClose }) {
     const name = data.get("name")?.trim();
     const email = data.get("email")?.trim();
     const phoneNumber = data.get("phoneNumber")?.trim();
-
+    const lar_id  = "6957566000001883477";
     const errors = [];
     if (!name) errors.push("Name cannot be empty");
     if (!email.includes("@")) errors.push("Email is invalid");
@@ -48,11 +49,11 @@ export default function Form({ isFormOpen, isFormClose }) {
     // Save all form data to state for later
     const pageUrl = window.location.href;
     setFormData({ name, email, phoneNumber, pageUrl });
-    const payload = { name, email, phoneNumber, pageUrl,gclid };
+    const payload = { name, email, phoneNumber, pageUrl,gclid, lar_id };
+    await saveLead(payload);
     try {
      
       const otpRes = await sendOtp(phoneNumber);
-      await saveLead(payload);
 
       if (otpRes.status === "success") {
         setStep(2);
@@ -86,6 +87,7 @@ async function verifyotp() {
 
     if (result?.description?.desc === "Code Matched successfully.") {
       setStep(3);
+      navigate('/thank-you')
       setMessage("Thank you for your response! We will reach you soon.");
       // ✅ Fire GTM event
       window.dataLayer = window.dataLayer || [];
@@ -220,7 +222,9 @@ async function verifyotp() {
                   )}
                 </div>
               )}
-            </form>
+            <input type='hidden' id="zc_gad" name="zc_gad" value=""/>
+          </form>
+          <script type="text/javascript" src='https://crm.zoho.com/crm/javascript/zcga.js'></script>
             {step === 3 && (
               <div className='text-center py-8'>
                 <h2 className='text-xl font-medium font-primary text-green-300'>
