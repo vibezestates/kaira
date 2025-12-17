@@ -3,6 +3,7 @@ import image from "../assets/images/fromImage.webp";
 import ModalBase from "./ModalBase";
 import { sendOtp, verifyOtp, saveLead } from "../helpers/otp";
 import { useNavigate } from 'react-router-dom'
+import ZohoLeadForm from "./ZohoLeadForm";
 
 export default function Form({ isFormOpen, isFormClose }) {
   const [step, setStep] = useState(1);
@@ -127,111 +128,8 @@ async function verifyotp() {
 
           {/* Right Form Section */}
           <div className='w-full md:w-1/2 bg-light p-6 sm:p-10 md:p-12 flex flex-col justify-center'>
-            <form className='w-full' onSubmit={handleSubmit}>
-              {step === 1 && (
-                <div>
-                  <div className='flex flex-col items-start py-3'>
-                    <label
-                      htmlFor='name'
-                      className='font-secondary text-stone-900 text-xl sm:text-2xl font-normal pb-3 tracking-tighter'>
-                      Your Name
-                    </label>
-                    <input
-                      type='text'
-                      id='name'
-                      name='name'
-                      className='p-1 w-full sm:p-2 bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
-                      placeholder='Enter your Name'
-                      style={{
-                            padding: "14px 14px",
-                      }}
-                    />
-                  </div>
+       <ZohoLeadForm  isDesktopOnly={true}/>
 
-                  <div className='flex flex-col items-start py-3'>
-                    <label
-                      htmlFor='email'
-                      className='font-secondary text-stone-900 text-xl sm:text-2xl font-normal pb-3 tracking-tighter'>
-                      Your Email ID
-                    </label>
-                    <input
-                      type='email'
-                      id='email'
-                      name='email'
-                      className='p-4 sm:p-5 bg-white w-full text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
-                      placeholder='Enter your email'
-                       style={{
-                            padding: "14px 14px",
-                      }}
-                    />
-                  </div>
-
-                  <div className='flex flex-col items-start py-3'>
-                    <label
-                      htmlFor='phoneNumber'
-                      className='font-secondary text-stone-900 text-xl sm:text-2xl font-normal pb-3 tracking-tighter'>
-                      Your Phone Number
-                    </label>
-                    <input
-                      type='tel'
-                      id='phoneNumber'
-                      name='phoneNumber'
-                      placeholder='Enter your phone number'
-                      className='p-4 w-full sm:p-5 bg-white text-lg sm:text-xl outline-none rounded-3xl placeholder:text-stone-400'
-                       style={{
-                            padding: "14px 14px",
-                      }}
-                    />
-                  </div>
-
-                  {message && (
-                    <p className='text-red-600 text-sm mt-2'>{message}</p>
-                  )}
-
-                  {/* 7. Remove onClick, type='submit' is all that's needed */}
-                  <button
-                    className='text-lg sm:text-xl rounded-full px-8 py-4 font-secondary font-medium mt-8 cursor-pointer bg-[#D3A270] text-white hover:bg-[#c08b5d] transition-all duration-300'
-                    type='submit'
-                    disabled={loading}>
-                    {loading
-                      ? "Submitting..."
-                      : "Submit your response and download!"}
-                  </button>
-                </div>
-              )}
-
-              {step === 2 && (
-                <div>
-                  <input
-                    type='text'
-                    placeholder='Enter OTP'
-                    value={otp}
-                    onChange={(e) => setOtp(e.target.value)}
-                    className='p-4 w-full rounded-lg border mb-3'
-                    required
-                  />
-                  {/* 8. Remove onClick, type='submit' is all that's needed */}
-                  <button
-                    type='submit'
-                    disabled={loading}
-                    className='px-6 py-3 bg-[#D3A270] text-white rounded-full'>
-                    {loading ? "Verifying..." : "Verify OTP"}
-                  </button>
-                  {message && (
-                    <p className='mt-2 text-sm text-gray-700'>{message}</p>
-                  )}
-                </div>
-              )}
-            <input type='hidden' id="zc_gad" name="zc_gad" value=""/>
-          </form>
-          <script type="text/javascript" src='https://crm.zoho.com/crm/javascript/zcga.js'></script>
-            {step === 3 && (
-              <div className='text-center py-8'>
-                <h2 className='text-xl font-medium font-primary text-green-300'>
-                  {message}
-                </h2>
-              </div>
-            )}
           </div>
         </div>
       </div>

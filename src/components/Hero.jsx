@@ -12,6 +12,7 @@ import image4 from "../assets/images/image4.webp";
 import image5 from "../assets/images/image5.webp";
 import image6 from "../assets/images/image6.webp";
 import image7 from "../assets/images/image7.webp";
+import ZohoLeadForm from "./ZohoLeadForm";
 
 // Reusable Animated Image Component
 const AnimatedImage = ({ src, alt, initialClass, finalClass, isAnimated }) => {
@@ -218,7 +219,8 @@ export default function Hero() {
               <MapPin className="text-brown-light w-5 h-5" />
               Sakleshpur, Karnataka
             </p>
-            <HorizontalForm isMobile={true} />
+            {/* <HorizontalForm isMobile={true} /> */}
+            <ZohoLeadForm />
             {/* <div className="pt-12 flex justify-center">
               <button
                 className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer"
