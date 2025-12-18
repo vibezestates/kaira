@@ -219,8 +219,8 @@ export default function Hero() {
               <MapPin className="text-brown-light w-5 h-5" />
               Sakleshpur, Karnataka
             </p>
-            {/* <HorizontalForm isMobile={true} /> */}
-            <ZohoLeadForm />
+            <HorizontalForm isMobile={true} />
+            {/* <ZohoLeadForm /> */}
             {/* <div className="pt-12 flex justify-center">
               <button
                 className="font-secondary font-bold text-lg sm:text-xl md:text-2xl text-brown px-8 py-4 rounded-[55px] border-2 border-brown hover:bg-brown hover:text-[#F5EDD9] transition duration-300 cursor-pointer"
@@ -237,6 +237,9 @@ export default function Hero() {
                 className="h-[150px] w-auto"
               />
             </div> */}
+
+{/* <iframe width = '610px' height = '380px' src = 'https://crm.zoho.com/crm/WebFormServeServlet?rid=d28ac6ea7314f41b6dfbec4762dc84790c99fb91788ffe43749e6ca52a1d4191a7932b0676f5d21249e02bd682e55245gid07e8b1c27c1f0236d58233f8ab21fd1646930000daca6de833735d238eac89e2'>
+</iframe> */}
           </div>
           {/* <div className="max-w-[400px] overflow-clip pt-4">
             <ImageSlider />
