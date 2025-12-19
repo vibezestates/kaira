@@ -1,7 +1,7 @@
 import { useState } from "react";
 import image from "../assets/images/fromImage.webp";
 import ModalBase from "./ModalBase";
-import { sendOtp, verifyOtp, saveLead } from "../helpers/otp";
+import { sendOtp, verifyOtp, saveLead, createZohoLead } from "../helpers/otp";
 import { useNavigate } from 'react-router-dom'
 
 export default function Form({ isMobile }) {
@@ -51,6 +51,7 @@ const navigate = useNavigate();
     setFormData({ name, email, phoneNumber, pageUrl, lar_id});
     const payload = { name, email, phoneNumber, pageUrl, gclid, lar_id };
     await saveLead(payload);
+    await createZohoLead(payload);
     try {
       const otpRes = await sendOtp(phoneNumber);
       

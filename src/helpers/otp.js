@@ -35,3 +35,32 @@ export const saveLead = async (data) => {
     return { success: false, message: err.message };
   }
 };
+export const getToken = async (data) => {
+  try {
+    const response = await fetch("https://kairaestateplots.com/api/gettoken", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    return await response.json();
+  } catch (err) {
+    console.error("Error sending lead:", err);
+    return { success: false, message: err.message };
+  }
+};
+
+export const createZohoLead = async (data) => {
+  try {
+    const res = await fetch(`https://kairaestateplots.com/api/zoholead`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    return await res.json();
+  } catch (err) {
+    console.error("Zoho Lead Error:", err);
+    return { success: false, error: err.message };
+  }
+};
