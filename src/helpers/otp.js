@@ -23,7 +23,7 @@ export const verifyOtp = async (phoneNumber, otp) => {
 
 export const saveLead = async (data) => {
   try {
-    const response = await fetch("https://kairaestateplots.com/api/save-lead", {
+    const response = await fetch("/api/save-lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -37,7 +37,7 @@ export const saveLead = async (data) => {
 };
 export const getToken = async (data) => {
   try {
-    const response = await fetch("https://kairaestateplots.com/api/gettoken", {
+    const response = await fetch("/api/gettoken", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -52,7 +52,7 @@ export const getToken = async (data) => {
 
 export const createZohoLead = async (data) => {
   try {
-    const res = await fetch(`https://kairaestateplots.com/api/zoholead`, {
+    const res = await fetch(`/api/zoholead`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
