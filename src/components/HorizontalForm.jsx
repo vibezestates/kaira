@@ -50,8 +50,19 @@ const navigate = useNavigate();
     const pageUrl = window.location.href;
     setFormData({ name, email, phoneNumber, pageUrl, lar_id});
     const payload = { name, email, phoneNumber, pageUrl, gclid, lar_id };
-    await createZohoLead(payload);
-    await saveLead(payload);
+    const zohoResponse = await createZohoLead(payload);
+
+    // await saveLead(payload);
+    console.log("Zoho Lead Response:", zohoResponse);
+    if (zohoResponse && !zohoResponse?.success) {
+    
+      setMessage(
+        zohoResponse?.error ||
+          "Failed to create lead. Please try again later."
+      );
+      setLoading(false);
+      return;
+    }
     try {
       const otpRes = await sendOtp(phoneNumber);
       
